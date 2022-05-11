@@ -1,8 +1,8 @@
 # Time is tricky.
 **Especially with serialization!**
 
-This mini project aims to be a sandbox with a custom Jackson configuration, to track down a problem I ran into in a
-production project.
+This mini Spring Boot project aims to be a sandbox with a custom Jackson configuration, to track down a problem I ran into in a
+production project. It has a couple of simple configuration classes, and a pretty fancy test.
 
 There is one endpoint:
 
