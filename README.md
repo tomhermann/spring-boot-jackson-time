@@ -1,5 +1,5 @@
 # Time is tricky.
-## Especially with serialization.
+**Especially with serialization!**
 
 This mini project aims to be a sandbox with a custom Jackson configuration, to track down a problem I ran into in a
 production project.
