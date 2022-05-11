@@ -32,15 +32,10 @@ class TimeControllerTest {
 
     @Test
     void currentTimeIsProduced(@Autowired Clock clock) {
-        var result = webTestClient.get().uri("/time/current")
+        webTestClient.get().uri("/time/current")
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody(TimeResponse.class)
-                .returnResult();
-
-        assertThat(result.getResponseBody())
-                .isNotNull()
-                .extracting(TimeResponse::time)
-                .isEqualTo(OffsetDateTime.now(clock));
+                .value(body -> assertThat(body.time()).isEqualTo(OffsetDateTime.now(clock)));
     }
 }
