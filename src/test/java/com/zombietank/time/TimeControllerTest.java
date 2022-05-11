@@ -38,7 +38,9 @@ class TimeControllerTest {
                 .expectBody(TimeResponse.class)
                 .returnResult();
 
-        assertThat(result.getResponseBody()).isNotNull();
-        assertThat(result.getResponseBody().time()).isEqualTo(OffsetDateTime.now(clock));
+        assertThat(result.getResponseBody())
+                .isNotNull()
+                .extracting(TimeResponse::time)
+                .isEqualTo(OffsetDateTime.now(clock));
     }
 }
