@@ -32,7 +32,7 @@ class TimeControllerTest {
 
     @Test
     void currentTimeIsProduced(@Autowired Clock clock) {
-        webTestClient.get().uri("/time/current")
+        this.webTestClient.get().uri("/time/current")
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody(TimeResponse.class)

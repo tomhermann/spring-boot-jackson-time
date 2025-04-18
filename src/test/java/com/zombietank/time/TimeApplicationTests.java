@@ -9,5 +9,4 @@ class TimeApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
